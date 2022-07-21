@@ -1,6 +1,6 @@
 describe('Alura busca cursos', () => {
 
-    beforeEach(() =>{
+    beforeEach(() => {
         cy.visit('https://www.alura.com.br/')
     })
 
