@@ -25,8 +25,8 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('a', 'Register now').click();
         cy.contains('button', 'Register').click();
         cy.get('input[formcontrolname="fullName"]').type('a')
-        cy.contains('button', 'Register').click();      
-        cy.contains('ap-vmessage', 'Mininum lenght is 2').should('be.visible');        
+        cy.contains('button', 'Register').click();            
+        cy.contains('ap-vmessage', 'Mininum length is 2').should('be.visible');        
     })
 
     it('verifica nome de usuario invalido', () =>{
@@ -34,7 +34,7 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('button', 'Register').click();
         cy.get('input[formcontrolname="userName"]').type('b')   
         cy.contains('button', 'Register').click();     
-        cy.contains('ap-vmessage', 'Mininum lenght is 2').should('be.visible');        
+        cy.contains('ap-vmessage', 'Mininum length is 2').should('be.visible');       
     })
 
     it('verifica senha invalida', () =>{
@@ -42,8 +42,7 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('button', 'Register').click();
         cy.get('input[formcontrolname="password"]').type('123')
         cy.contains('button', 'Register').click();        
-        cy.contains('ap-vmessage', 'Mininum lenght is 8').should('be.visible');        
-    })
-
+        cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');        
+    })    
     
 })
